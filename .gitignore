@@ -1,0 +1,18 @@
+# Ambiente Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dados brutos (muito grandes - baixar via DataSUS/Drive)
+data/raw/*.feather
+data/raw/*.dbc
+
+# Modelos treinados (gerados ao rodar os notebooks)
+models/*.joblib
+models/*.keras
+
+# Sistema
+.DS_Store
+Thumbs.db
