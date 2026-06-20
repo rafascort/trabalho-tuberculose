@@ -52,7 +52,7 @@ pip install torch
 - **05**: comparacao dos modelos, importancia das variaveis e SHAP.
 
 > Os modelos treinados sao salvos automaticamente em `models/` e podem ser usados
-> depois (ex.: no app do seu colega).
+> depois
 
 ## 5. Memoria
 
