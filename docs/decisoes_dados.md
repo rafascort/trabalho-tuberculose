@@ -16,9 +16,6 @@ filtros abaixo, chegando a **563.894** casos validos.
 | Exclui gestantes (`CS_GESTANT`) | Manejo e adesao especificos; evita confundimento. |
 | `SITUA_ENCE` em {1,2} | Mantem apenas desfechos comparaveis: cura (0) e abandono (1). Removidos obitos, transferencias e mudanca de diagnostico. |
 
-> Estes filtros reproduzem a metodologia oficial fornecida pelos professores
-> (`data-prep.py` do repositorio base).
-
 ## 2. Criacao da variavel-alvo
 
 `ltfu` = 1 se `SITUA_ENCE` = 2 (abandono), 0 se `SITUA_ENCE` = 1 (cura). Linhas sem
@@ -73,15 +70,14 @@ sensiveis a prevalencia.
 - **Numericas:** `StandardScaler` (media 0, desvio 1).
 - **Categoricas:** `OneHotEncoder(drop='first')`, com `handle_unknown='ignore'` para
   lidar com categorias novas nos conjuntos de teste.
-- Tudo encapsulado em um `ColumnTransformer` (mesmo padrao das aulas), garantindo que
+- Tudo encapsulado em um `ColumnTransformer` , garantindo que
   os parametros sejam aprendidos **apenas no treino** e aplicados ao teste.
 
 ## 9. Desbalanceamento de classes
 
 Optamos por `class_weight='balanced'` na regressao logistica e por **pesos de classe**
-no `fit` da rede neural. Justificativa: o **SMOTE** (visto em aula) e inviavel em
-~560 mil linhas pelo custo computacional do calculo de vizinhos; `class_weight` esta
-inclusive no grid de busca usado nas aulas e escala para grandes volumes.
+no `fit` da rede neural. Justificativa: o **SMOTE**  e inviavel em
+~560 mil linhas pelo custo computacional do calculo de vizinhos.
 
 ## 10. Reprodutibilidade
 

@@ -1,5 +1,4 @@
 # Gera treino/teste1/teste2 a partir do feather bruto do SINAN.
-# Segue a mesma divisao temporal e os filtros do data-prep do professor.
 # (detalhes em docs/decisoes_dados.md)
 
 import os

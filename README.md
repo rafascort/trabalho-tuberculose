@@ -2,7 +2,7 @@
 
 Projeto de Machine Learning para estimar a **probabilidade de um paciente abandonar
 o tratamento de tuberculose** (LTFU - *Loss to Follow-Up*), a partir dos microdados
-do SINAN/DataSUS. O codigo segue o mesmo padrao usado nas aulas.
+do SINAN/DataSUS.
 
 ## Estrutura das pastas
 
