@@ -9,10 +9,10 @@ do SINAN/DataSUS. O codigo segue o mesmo padrao usado nas aulas.
 ```
 projeto-tuberculose/
 ├── data/
-│   ├── raw/          -> base bruta (tuberculose_unificado.feather)  [nao versionar]
-│   └── processed/    -> treino.csv, teste1.csv, teste2.csv (ja prontos)
+│   ├── raw/          -> base bruta (tuberculose_unificado.feather)  
+│   └── processed/    -> treino.csv, teste1.csv, teste2.csv 
 ├── src/              -> codigo reutilizavel
-│   ├── data_prep.py        (feather bruto -> treino/teste1/teste2, em polars)
+│   ├── data_prep.py        (feather bruto -> treino/teste1/teste2)
 │   └── preprocessing.py    (listas de variaveis + ColumnTransformer)
 ├── notebooks/        -> 01 a 05, na ordem da analise (rodam no VSCode)
 ├── models/           -> modelos e transformadores salvos (.joblib / .keras)
@@ -23,8 +23,7 @@ projeto-tuberculose/
 
 ## Para que serve cada pasta
 
-- **data/raw**: a base original do SINAN (um arquivo .feather gigante). Nao vai para o
-  GitHub; serve so para regerar os CSVs.
+- **data/raw**: a base original do SINAN (um arquivo .feather gigante). serve só para regerar os CSVs.
 - **data/processed**: os tres conjuntos ja limpos e divididos. Sao a entrada dos modelos.
 - **src**: scripts que os notebooks importam, para nao repetir codigo.
 - **notebooks**: onde a analise acontece, passo a passo, com comentarios curtos.
@@ -64,17 +63,12 @@ Depois, abra a pasta `notebooks/` no VSCode e rode na ordem **01 -> 05**.
 | Rede Neural | teste1 | 0,785 | 0,682 | 0,783 |
 | Rede Neural | teste2 | 0,757 | 0,777 | 0,756 |
 
-> Observacoes: (1) os notebooks usam toda a base de treino por padrao (`N_TREINO = None`);
-> defina um numero menor se faltar memoria. Os dois modelos tem desempenho semelhante,
-> com leve vantagem da rede neural no ROC-AUC. (2) A prevalencia de abandono e maior
-> em 2025 (teste) por *censura a direita* - casos de cura levam ~6 meses para encerrar.
 
 ## Notas de estilo
 
-- Pre-processamento com `ColumnTransformer` (como nas aulas), sem classes customizadas.
-- Desbalanceamento tratado com `class_weight='balanced'` (presente no grid das aulas;
-  o SMOTE visto em aula nao escala para ~560 mil linhas).
-- Rede neural com **Keras 3** (mesmo codigo roda com backend torch ou tensorflow).
+- Pre-processamento com `ColumnTransformer`, sem classes customizadas.
+- Desbalanceamento tratado com `class_weight='balanced'`.
+- Rede neural com **Keras 3**.
 
 ## App de producao (Streamlit)
 
