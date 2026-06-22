@@ -24,6 +24,7 @@ projeto-tuberculose/
 ## Para que serve cada pasta
 
 - **data/raw**: a base original do SINAN (um arquivo .feather gigante). serve só para regerar os CSVs.
+  - OBS: Não foi feito o upload dessa pasta para o GitHub devido ao tamanho. Dados disponíveis em: https://drive.google.com/drive/folders/1qd1XTZ8_xqACKJiJCxMC4r4fIC1h3Qag?usp=sharing
 - **data/processed**: os tres conjuntos ja limpos e divididos. Sao a entrada dos modelos.
 - **src**: scripts que os notebooks importam, para nao repetir codigo.
 - **notebooks**: onde a analise acontece, passo a passo, com comentarios curtos.
