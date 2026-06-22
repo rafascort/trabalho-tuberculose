@@ -61,9 +61,22 @@ todo o desempenho. Por isso, o notebook 04 (rede neural) e o 06 (busca de
 hiperparametros) sao pesados e podem demorar e consumir bastante memoria - rode num
 computador com RAM suficiente e, de preferencia, um notebook de cada vez.
 
+## App de producao (Streamlit)
+
+Prototipo de apoio a decisao para o profissional de saude: poucos campos de entrada,
+retorna a probabilidade de abandono + classificacao de risco + acoes sugeridas.
+Usa um modelo reduzido a 8 variaveis (em `models/modelo_producao.joblib`).
+Execute:
+```bash
+streamlit run app/app.py
+```
+
 ## Dica
 Rode **um notebook de cada vez** e espere terminar antes de abrir o proximo, para
 nao competir por memoria.
 
 ## Observação
-A pasta data/raw não está no GitHub, caso queira reprocessar todos os dados para gerar treino/teste os dados estão disponíveis em https://drive.google.com/drive/folders/1qd1XTZ8_xqACKJiJCxMC4r4fIC1h3Qag?usp=drive_link
+A pasta `/data/raw` não está no GitHub, caso queira reprocessar todos os dados para gerar treino/teste siga os seuintes passos:
+1. Baixe o dataset disponível em https://drive.google.com/drive/folders/1qd1XTZ8_xqACKJiJCxMC4r4fIC1h3Qag?usp=drive_link
+2. Crie uma pasta chamada "raw" dentro da pasta "data" e dentro coloque o dataset baixado (`/data/raw/tuberculose_unificado.feather`)
+3. execute o código de `/src/data_prep.py`
