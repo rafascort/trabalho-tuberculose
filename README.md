@@ -55,7 +55,7 @@ Depois, abra a pasta `notebooks/` no VSCode e rode na ordem **01 -> 05**.
 1. Treina em `treino.csv` -> avalia em `teste1.csv`.
 2. Junta `teste1.csv` ao treino -> avalia em `teste2.csv`.
 
-## Resultados (resumo)
+## Resultados 
 
 | Modelo | Conjunto | ROC-AUC | F1 | Recall |
 |--------|----------|---------|----|--------|
