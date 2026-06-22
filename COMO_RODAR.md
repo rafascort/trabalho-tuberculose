@@ -61,12 +61,9 @@ todo o desempenho. Por isso, o notebook 04 (rede neural) e o 06 (busca de
 hiperparametros) sao pesados e podem demorar e consumir bastante memoria - rode num
 computador com RAM suficiente e, de preferencia, um notebook de cada vez.
 
-## 6. Atualizar os numeros no relatorio/slides (opcional)
-
-Depois de rodar com a base completa, os valores de metricas podem mudar um pouco.
-Se quiser, me mande os resultados que aparecem nos notebooks 03, 04 e 05 que eu
-atualizo a tabela do relatorio e dos slides.
-
 ## Dica
 Rode **um notebook de cada vez** e espere terminar antes de abrir o proximo, para
 nao competir por memoria.
+
+## Observação
+A pasta data/raw não está no GitHub, caso queira reprocessar todos os dados para gerar treino/teste os dados estão disponíveis em https://drive.google.com/drive/folders/1qd1XTZ8_xqACKJiJCxMC4r4fIC1h3Qag?usp=drive_link
